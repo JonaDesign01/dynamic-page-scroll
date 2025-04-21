@@ -10,9 +10,9 @@ type SmoothScrollWrapperProps = {
 export default function SmoothScrollWrapper({
   children,
 }: SmoothScrollWrapperProps) {
-  const lenis = useLenis(({ scroll }) => {
-    // called every scroll
-  });
+  // const lenis = useLenis(({ scroll }) => {
+  //   // called every scroll
+  // });
 
   return <ReactLenis root>{children}</ReactLenis>;
 }
