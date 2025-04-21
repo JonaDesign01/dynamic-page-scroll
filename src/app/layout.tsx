@@ -9,8 +9,6 @@ import MobileHeader from "@/components/layout/mobileHeader";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
-import { ViewTransitions } from "next-view-transitions";
-
 const cabinetGrotesk = localFont({
   src: "fonts/CabinetGrotesk-Variable.woff2",
   variable: "--font-cabinet-grotesk",
@@ -44,23 +42,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="nl">
-        <body
-          suppressHydrationWarning
-          className={`${cabinetGrotesk.variable} ${melodrama.variable}`}
-        >
-          <AppRouterCacheProvider>
-            <ThemeProvider theme={theme}>
-              <MobileHeader />
-              <Header />
-              {children}
-              <Footer />
-              <CssBaseline />
-            </ThemeProvider>
-          </AppRouterCacheProvider>
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="nl">
+      <body
+        suppressHydrationWarning
+        className={`${cabinetGrotesk.variable} ${melodrama.variable}`}
+      >
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>
+            <MobileHeader />
+            <Header />
+            {children}
+            <Footer />
+            <CssBaseline />
+          </ThemeProvider>
+        </AppRouterCacheProvider>
+      </body>
+    </html>
   );
 }
