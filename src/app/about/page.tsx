@@ -1,4 +1,3 @@
-import SmoothScrollWrapper from "@/components/smoothScrollWrapper";
 import Hero from "./hero";
 
 export function generateMetadata() {
@@ -12,9 +11,7 @@ export function generateMetadata() {
 export default function About() {
   return (
     <main>
-      <SmoothScrollWrapper>
-        <Hero />
-      </SmoothScrollWrapper>
+      <Hero />
     </main>
   );
 }

@@ -1,4 +1,3 @@
-import SmoothScrollWrapper from "@/components/smoothScrollWrapper";
 import Hero from "./hero";
 import { mediaItems } from "@/utils/mediaItems";
 
